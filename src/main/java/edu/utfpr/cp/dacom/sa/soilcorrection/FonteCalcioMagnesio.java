@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 
-@RequiredArgsConstructor
+@Getter @RequiredArgsConstructor
 public enum FonteCalcioMagnesio
         implements IFonteNutriente {
 
@@ -16,8 +16,8 @@ public enum FonteCalcioMagnesio
     HIDROXIDO_CALCIO(75.7, Set.of()),
     CALCARIO_MAGNESIANO(35.0, Set.of());
 
-    @Getter private final double teorFonte;
-    @Getter private final Set<NutrienteAdicional> nutrienteAdicionais;
+    private final double teorFonte;
+    private final Set<NutrienteAdicional> nutrienteAdicionais;
 
 
 
