@@ -4,6 +4,6 @@ public enum NomeNutrienteAdicional {
     ENXOFRE,
     CALCIO,
     NITROGENIO,
-    MAGNESIO;
-    
+    MAGNESIO
+
 }
