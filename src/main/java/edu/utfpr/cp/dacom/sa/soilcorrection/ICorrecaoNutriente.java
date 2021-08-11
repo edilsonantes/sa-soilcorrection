@@ -1,12 +1,13 @@
 package edu.utfpr.cp.dacom.sa.soilcorrection;
 
 import java.util.Set;
+import lombok.NonNull;
 
 public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     
     default double calculaCusto(
-            double custoFonte,
-            double qtdeAplicar) {
+            @NonNull double custoFonte,
+            @NonNull double qtdeAplicar) {
 
         if (custoFonte <= 0) {
             throw new IllegalArgumentException();
@@ -20,8 +21,8 @@ public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     }
 
     default Set<NutrienteAdicional> getNutrientesAdicionais(
-            double qtdeAplicar,
-            T fonteNutriente) {
+            @NonNull double qtdeAplicar,
+            @NonNull T fonteNutriente) {
 
         fonteNutriente
             .getNutrientesAdicionais()
@@ -35,8 +36,8 @@ public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     }
 
     default double calculaEficienciaNutriente(
-            double qtdeNutrienteAdicionar,
-            double eficienciaNutriente) {
+            @NonNull double qtdeNutrienteAdicionar,
+            @NonNull double eficienciaNutriente) {
 
         if (qtdeNutrienteAdicionar <= 0) {
             throw new IllegalArgumentException();
