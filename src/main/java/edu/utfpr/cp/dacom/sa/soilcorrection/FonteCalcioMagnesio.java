@@ -3,6 +3,7 @@ package edu.utfpr.cp.dacom.sa.soilcorrection;
 import java.util.Set;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.NonNull;
 
 
 @Getter @RequiredArgsConstructor
@@ -17,7 +18,7 @@ public enum FonteCalcioMagnesio
     CALCARIO_MAGNESIANO(35.0, Set.of());
 
     private final double teorFonte;
-    private final Set<NutrienteAdicional> nutrienteAdicionais;
+    @NonNull private final Set<NutrienteAdicional> nutrienteAdicionais;
 
 
 
