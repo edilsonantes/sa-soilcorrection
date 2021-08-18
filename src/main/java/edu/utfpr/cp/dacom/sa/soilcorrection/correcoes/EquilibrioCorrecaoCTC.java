@@ -1,10 +1,10 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes;
 
 import lombok.NonNull;
 
 public class EquilibrioCorrecaoCTC {
 
-    double calculaSCmol(
+    public double calculaSCmol(
             @NonNull double potassio,
             @NonNull double calcio,
             @NonNull double magnesio) {
@@ -12,7 +12,7 @@ public class EquilibrioCorrecaoCTC {
         return potassio + calcio + magnesio;
     }
 
-    double calculaCTCCmol(
+    public double calculaCTCCmol(
             @NonNull double potassio,
             @NonNull double calcio,
             @NonNull double magnesio,
@@ -21,7 +21,7 @@ public class EquilibrioCorrecaoCTC {
         return calculaSCmol(potassio, calcio, magnesio) + hidrogenioAluminio;
     }
 
-    double calculaVPercentual(@NonNull double Scmol, @NonNull double CTCcmol) {
+    public double calculaVPercentual(@NonNull double Scmol, @NonNull double CTCcmol) {
         
         if (Scmol > 0 && CTCcmol > 0) {
             return Scmol / CTCcmol * 100;
@@ -31,7 +31,7 @@ public class EquilibrioCorrecaoCTC {
         }
     }
 
-    double calculaMOPercentual(@NonNull double mo) {
+    public double calculaMOPercentual(@NonNull double mo) {
         if (mo > 0) {
             return mo / 10;
             
@@ -40,7 +40,7 @@ public class EquilibrioCorrecaoCTC {
         }
     }
 
-    double calculaCarbono(@NonNull double moPercentual) {
+    public double calculaCarbono(@NonNull double moPercentual) {
         
         if (moPercentual > 0) {
             return moPercentual / 1.72 * 10;

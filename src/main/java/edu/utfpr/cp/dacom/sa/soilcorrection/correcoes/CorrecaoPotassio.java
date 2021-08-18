@@ -1,5 +1,6 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes;
 
+import edu.utfpr.cp.dacom.sa.soilcorrection.fontes.FontePotassio;
 import lombok.NonNull;
 
 public class CorrecaoPotassio 
