@@ -1,4 +1,4 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes.interfaces;
 
 import java.util.Set;
 

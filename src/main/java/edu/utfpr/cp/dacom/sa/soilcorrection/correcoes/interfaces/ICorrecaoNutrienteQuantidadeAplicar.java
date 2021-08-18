@@ -1,4 +1,4 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes.interfaces;
 
 import edu.utfpr.cp.dacom.sa.soilcorrection.fontes.IFonteNutriente;
 import lombok.NonNull;

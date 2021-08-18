@@ -1,5 +1,6 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection.conversoes;
+package edu.utfpr.cp.dacom.sa.soilcorrection.conversoes.conversoesKgHa;
 
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversoes.Conversao;
 import lombok.NonNull;
 
 public class ConverteKgHaEmP2O5 implements Conversao<Double, Double> {
