@@ -1,7 +1,6 @@
 package edu.utfpr.cp.dacom.sa.soilcorrection.correcoes;
 
 import edu.utfpr.cp.dacom.sa.soilcorrection.fontes.FontePotassio;
-import lombok.NonNull;
 
 public class CorrecaoPotassio 
         implements 
@@ -9,9 +8,9 @@ public class CorrecaoPotassio
             ICorrecaoNutrienteQuantidadeAplicar<FontePotassio> {
 
     public double calculaNecessidadeAdicionarCMolcDm3 (
-        @NonNull double teorSolo,
-        @NonNull double participacaoCTCExistente,
-        @NonNull double participacaoCTCDesejada) {
+        double teorSolo,
+        double participacaoCTCExistente,
+        double participacaoCTCDesejada) {
 
             if (teorSolo <= 0) {
                 throw new IllegalArgumentException();

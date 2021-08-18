@@ -9,8 +9,8 @@ import lombok.NonNull;
 public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     
     default double calculaCusto(
-            @NonNull double custoFonte,
-            @NonNull double qtdeAplicar) {
+            double custoFonte,
+            double qtdeAplicar) {
 
         if (custoFonte <= 0) {
             throw new IllegalArgumentException();
@@ -24,7 +24,7 @@ public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     }
 
     default Set<NutrienteAdicional> getNutrientesAdicionais(
-            @NonNull double qtdeAplicar,
+            double qtdeAplicar,
             @NonNull T fonteNutriente) {
 
         fonteNutriente
@@ -39,8 +39,8 @@ public interface ICorrecaoNutriente<T extends IFonteNutriente> {
     }
 
     default double calculaEficienciaNutriente(
-            @NonNull double qtdeNutrienteAdicionar,
-            @NonNull double eficienciaNutriente) {
+            double qtdeNutrienteAdicionar,
+            double eficienciaNutriente) {
 
         if (qtdeNutrienteAdicionar <= 0) {
             throw new IllegalArgumentException();

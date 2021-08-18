@@ -6,7 +6,7 @@ import lombok.NonNull;
 public interface ICorrecaoNutrienteQuantidadeAplicar<T extends IFonteNutriente> {
     
     default double calculaQuantidadeAplicar(
-            @NonNull double necessidade,
+            double necessidade,
             @NonNull T fonteNutriente) {
 
         if (necessidade <= 0) {
